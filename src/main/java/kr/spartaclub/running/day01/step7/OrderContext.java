@@ -10,11 +10,11 @@ public class OrderContext {
     // 오전반 설정: 사람 바리스타(창고주입) + 캐셔
     public static Cashier configMorningShift() {
         // 1. 창고를 먼저 만들고
-        BeanStorage storage = new BeanStorage();
+//        BeanStorage storage = new BeanStorage();
         // 2. 창고를 가진 바리스타를 만들고
-        Barista barista = new Barista(storage);
+//        Barista barista = new Barista(storage);
         // 3. 그 바리스타와 일할 캐셔를 만듭니다.
-        return new Cashier(barista);
+        return new Cashier(new Barista(new BeanStorage()));
     }
 
     // 오후반 설정: 로봇 바리스타 + 캐셔

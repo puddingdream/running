@@ -6,7 +6,7 @@ package kr.spartaclub.running.day01.step5;
 public class OrderContext {
 
     // 오전반 설정: 사람 바리스타 + 캐셔
-    public static kr.spartaclub.running.day01.step5.Cashier configMorningShift() {
+    public static Cashier configMorningShift() {
         return new Cashier(new Barista()); // 의존성 주입 (DI)
     }
 
