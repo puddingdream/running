@@ -43,7 +43,7 @@ public class Main {
         System.out.println("subResult = " + subResult);
 
         // 곱셈을하고싶어 -> 람다
-        Calculator multiOperation = (n1,  n2) -> n1 * n2;
+        Calculator multiOperation = (n1, n2) -> n1 * n2;
         int multiResult = multiOperation.operate(3, 8);
         System.out.println("multiResult = " + multiResult);
 
