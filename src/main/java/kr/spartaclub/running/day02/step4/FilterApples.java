@@ -53,8 +53,18 @@ public class FilterApples {
 
         // 2. 반복문과 조건문을 통해 필터링
         for (Apple apple : basket) {
-            if (predicate.test(apple)) {
+// [디버깅] 현재 검사 중인 사과의 정보와 조건 부합 여부를 출력
+            boolean isPass = predicate.test(apple);
+
+            System.out.println("🔍 검사 중: %s | 통과 여부: %b".formatted(apple, isPass));
+
+            if (isPass) {
                 filteredBasket.add(apple);
+                // [디버깅] 통과된 경우만 추가 로그
+                System.out.println("   ✅ 바구니에 담겼습니다!");
+            } else {
+                // [디버깅] 탈락한 경우 이유를 추측할 수 있게 출력
+                System.out.println("   ❌ 조건에 맞지 않아 탈락했습니다.");
             }
         }
         return filteredBasket;

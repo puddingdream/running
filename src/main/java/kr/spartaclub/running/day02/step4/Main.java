@@ -12,6 +12,7 @@ public class Main {
 
         List<Apple> greenApples
                 = filterGreenApples(appleBasket);
+        System.out.println("greenApples = " + greenApples);
 
         for (Apple greenApple : greenApples) {
             System.out.println("greenApple = " + greenApple);
