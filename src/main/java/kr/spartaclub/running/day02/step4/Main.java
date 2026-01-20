@@ -1,5 +1,6 @@
 package kr.spartaclub.running.day02.step4;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static kr.spartaclub.running.day02.step4.Color.*;
@@ -42,5 +43,36 @@ public class Main {
 
         List<Apple> filter3 = filter(appleBasket, a -> a.getColor() == RED || a.getColor() == YELLOW);
         filter3.forEach(System.out::println);
+
+
+        System.out.println("===============");
+
+        List<Color> fiterName = Example.getAppleNames(appleBasket);
+        System.out.println("fiterName = " + fiterName);
+
+        List<Object> objects = Example.mapApple(appleBasket, Apple::getWeight);
+        System.out.println("objects = " + objects);
+
+        for (Object object : objects) {
+            System.out.println("object = " + object);
+        }
+
+        System.out.println("===============");
+        List<Integer> weights = Example.map(appleBasket, apple -> apple.getWeight());
+        for (Integer weight : weights) {
+            System.out.println("weight = " + weight);
+        }
+
+        System.out.println("===============");
+
+//        List<Student> classRoom = Arrays.asList(
+//                new Student("김철수", 90),
+//                new Student("이영희", 100),
+//                new Student("박지성", 85)
+//        );
+
     }
+
+
 }
+

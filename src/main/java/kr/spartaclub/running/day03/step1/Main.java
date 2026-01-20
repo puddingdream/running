@@ -1,11 +1,10 @@
 package kr.spartaclub.running.day03.step1;
 
-import java.util.*;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
 
-import static java.util.Comparator.*;
-import static java.util.stream.Collectors.*;
+import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.toList;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,15 +23,13 @@ public class Main {
 
         // 필터링
         for (Idol idol : idols) {
-
             /*
             idol.getTeam().equals("IVE"); // X
             "IVE".equals(idol.getTeam()); // O
             Objects.equals(idol.getTeam(), "IVE") // modern O
 
              */
-
-            if ("IVE".equals(idol.getTeam())) {
+            if ("IVE".equalsIgnoreCase(idol.getTeam())) {
                 filteredMembers.add(idol);
             }
         }

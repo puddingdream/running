@@ -21,7 +21,7 @@ public class Finding {
         Dish firstFishDish = menuList.stream()
                 .filter(m -> m.getType() == DishType.FISH)
                 .findFirst()
-                .get();
+                .get(); // optional 이라서 get으로 까주기
 
         System.out.println("firstFishDish = " + firstFishDish);
 
